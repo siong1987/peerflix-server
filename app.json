@@ -11,9 +11,7 @@
 		"server",
 		"web"
 	],
-	"buildpacks" : [
-		{
-			"url" : "https://github.com/abecadel/heroku-buildpack-nodejs-grunt-bower"
-		}
-	]
+  "env": [
+    "BUILDPACK_URL": "https://github.com/ddollar/heroku-buildpack-multi.git"
+  ]
 }
