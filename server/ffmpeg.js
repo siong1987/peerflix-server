@@ -27,7 +27,7 @@ module.exports = function (req, res, torrent, file) {
   function remux() {
     res.type('video/mp4');
     var command = ffmpeg(file.createReadStream())
-      .videoCodec('copy').audioCodec('aac').format('mp4')
+      .videoCodec('libx264').audioCodec('aac').format('mp4')
       .outputOptions('-movflags frag_keyframe+empty_moov')
       .on('start', function (cmd) {
         console.log(cmd);
